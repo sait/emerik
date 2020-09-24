@@ -21,17 +21,10 @@
             text-align: center;
             width: 550px;
             height: 50px;
-            color: white;
+            color: black;
         }
-        h3{
-            color: white;
-        }
-        .card{
+        #card, #card2{
             background-color: lightblue;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
         }
         td, th {
             border: 1px solid black;
@@ -39,96 +32,111 @@
             padding: 8px;
             background-color: lightseagreen;
         }
-        #btn, #nombre, #edad, #correo, #puesto{
-            width: 90%;
+        #btn{
+            text-align: center;
+            width: 100%;
+        }
+        #nombre, #correo, #cel, #titulo{
+            margin-left: 25px;
+            width: 40%;
+        }
+        label, p{
             margin-left: 25px;
         }
-        #ingreso{
+        h3{
             text-align: center;
-            margin-left: 200px;
         }
+        textarea{
+            margin-left: 25px;
+            margin-right: 25px;
+            width: 93%;
+            height: 50%;
+        }
+
 
     </style>
 </head>
+
+<!--                    CUERPO DE LA PAGINA                    -->
 <body>
     <br><br>
 
         <div class="container-fluid" id="contenedor">
-                <h1> FORMULARIO DE USUARIOS </h1>  
+            <div class="jumbotron">
+                <h1> TICKET SAIT </h1>  
+            </div>
         </div>
     
     </div>
     <!--   FORMULARIO  -->
     <br><br><br>
-
+    
     <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <h3>Formulario</h3>
-                <br>
-
-
-                <form action="/respuesta.html"> 
+      <div class="jumbotron">
+        <form action="respuesta.html"> 
+            <div class="row">
+                <div class="col-sm-12">
                     <div class="card white" id="card">
+                        <h3>Información de Contacto</h3>
                         <div class="card-content black text">
-                            <span class=" card-title black text" id="ingreso"> INGRESAR DATOS </span><br><br>
+                            <span class="text-danger"> *FAVOR DE LLENAR EL FORMULARIO COMPLETO PARA CREAR TICKET* </span><br><br>
                                 <div class="row">
                                     <div class="input-field col-sm-12">
-                                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                                        <Label>Correo Electrónico:</Label>
+                                        <input type="email" name="correo" id="correo"  required>
                                     </div><br><br>
                                     <div class="input-field col-sm-12">
-                                        <input type="number" name="edad" id="edad" placeholder="Edad" required>
+                                        <Label>Nombre Completo:</Label>
+                                        <input type="text" name="nombre" id="nombre"  required>
                                     </div><br><br>
                                     <div class="input-field col-sm-12">
-                                        <input type="email" name="correo" id="correo" placeholder="Correo" required>
-                                    </div><br><br>
-                                    <div class="input-field col-sm-12">
-                                        <input type="text" name="puesto" id="puesto" placeholder="Puesto" required>
-                                    </div><br><br>
-                                    <input type="submit" id="btn" value="Guardar"> <br><br> 
+                                        <Label>Celular:</Label>
+                                        <input type="text" name="nombre" id="cel"  required>
+                                    </div><br><br> 
                                 </div>
                         </div>
                     </div>
-                </form>
-
-
-            </div>
-            <div class="col-sm-6">
-                <h3>Usuarios</h3>
-                <br>
-                <div class="container">
-                    <table>
-                        <tr>
-                            <th>NOMBRE</th>
-                            <th>EDAD</th>
-                            <th>CORREO</th>
-                            <th>PUESTO</th>
-                        </tr>
-                        <tr>
-                            <td>Emerik Silva</td>
-                            <td>20</td>
-                            <td>e.34.1204@gmail.com</td>
-                            <td>Programador Web</td>
-                        </tr>
-                        <tr>
-                            <td>Enrique Nuñez</td>
-                            <td>20</td>
-                            <td>enriquenunez@gmail.com</td>
-                            <td>Programador Web</td>
-                        </tr>
-                        <tr>
-                            <td>Isaí Aguilar</td>
-                            <td>20</td>
-                            <td>isai2000a@gmail.com</td>
-                            <td>Base de Datos</td>
-                        </tr>
-                    </table>
                 </div>
-
             </div>
-            
 
-        </div>
+            <br>
+
+            <div class="card white" id="card2">
+                <div class="row">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <h3>Detalles de Ticket</h3>
+                    </div>
+                    <div class="col-sm-4"></div>
+                
+                    <div class="col-sm-12">
+                        <p class="text-danger"> IMPORTANTE</p>
+                        <p class=" text-secondary"> **Favor de dar buenos detalles para poder solucionar
+                            su problema lo más pronto posible.**
+                        </p>
+                    </div><br><br>
+                    <div class="col-sm-12 container">
+                        <Label>Titulo de su Ticket:</Label>
+                        <input type="text" name="titulo" id="titulo">
+                    </div> <br><br>
+                    <div class="col-sm-12">
+                        <Label>Detalles:</Label><br>
+                        <textarea name="detalles" placeholder="Detalle del problema" ></textarea><br><br>
+                    </div>
+                </div>
+            </div> 
+
+
+        
+            <div class="row">
+                <div class="col-sm-9"></div>
+                <div class="col-sm-3">
+                    <br><br>
+                    <input type="submit" id="btn" value="Crear Ticket"> <br><br>
+                </div>
+            </div>
+        </form>
+      </div>  
     </div>
 
 
