@@ -8,33 +8,44 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+    <!-- PARTE DE CSS -->
     <style>
         body{
-            background-color: lightblue;
+            background-image: url('programacion.jpg');
+            background-size: 100%;
         }
-        h1{
-            background-color: black;
+        #contenedor{
+            text-align: center;
             width: 550px;
             height: 50px;
             color: white;
         }
-        .card{
-            background-color: lightcoral;
+        h3{
+            color: white;
         }
-        button{
-            width: 100%;
-            background-color: lightgreen;
+        .card{
+            background-color: lightblue;
         }
         table {
             border-collapse: collapse;
             width: 100%;
         }
-
         td, th {
             border: 1px solid black;
             text-align: left;
             padding: 8px;
-            background-color: yellow;
+            background-color: lightseagreen;
+        }
+        #btn, #nombre, #edad, #correo, #puesto{
+            width: 90%;
+            margin-left: 25px;
+        }
+        #ingreso{
+            text-align: center;
+            margin-left: 200px;
         }
 
     </style>
@@ -42,20 +53,12 @@
 <body>
     <br><br>
 
-    <div class="row">
-        
-    <div class="col-sm-4">
-
-    </div>
-    <div class="col-sm-4">
-        <h1> FORMULARIO DE USUARIOS </h1>
-    </div>
-    <div class="col-sm-4">
-
-    </div>
+        <div class="container-fluid" id="contenedor">
+                <h1> FORMULARIO DE USUARIOS </h1>  
+        </div>
     
     </div>
-
+    <!--   FORMULARIO  -->
     <br><br><br>
 
     <div class="container">
@@ -63,28 +66,30 @@
             <div class="col-sm-6">
                 <h3>Formulario</h3>
                 <br>
-                
-                <div class="card white" id="card">
-                    <div class="card-content black text">
-                        <span class=" card-title black text"> INGRESAR DATOS </span><br><br>
-                        <div class="row">
-                            <div class="input-field col-sm-12">
-                                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                            </div><br><br>
-                            <div class="input-field col-sm-12">
-                                <input type="number" name="edad" id="edad" placeholder="Edad">
-                            </div><br><br>
-                            <div class="input-field col-sm-12">
-                                <input type="text" name="correo" id="correo" placeholder="Correo">
-                            </div><br><br>
-                            <div class="input-field col-sm-12">
-                                <input type="text" name="puesto" id="puesto" placeholder="Puesto">
-                            </div>
-                            <button class="btn">Guardar Datos</button>
+
+
+                <form action="/respuesta.html"> 
+                    <div class="card white" id="card">
+                        <div class="card-content black text">
+                            <span class=" card-title black text" id="ingreso"> INGRESAR DATOS </span><br><br>
+                                <div class="row">
+                                    <div class="input-field col-sm-12">
+                                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                                    </div><br><br>
+                                    <div class="input-field col-sm-12">
+                                        <input type="number" name="edad" id="edad" placeholder="Edad" required>
+                                    </div><br><br>
+                                    <div class="input-field col-sm-12">
+                                        <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                                    </div><br><br>
+                                    <div class="input-field col-sm-12">
+                                        <input type="text" name="puesto" id="puesto" placeholder="Puesto" required>
+                                    </div><br><br>
+                                    <input type="submit" id="btn" value="Guardar"> <br><br> 
+                                </div>
                         </div>
                     </div>
-                </div>
-
+                </form>
 
 
             </div>
@@ -125,6 +130,9 @@
 
         </div>
     </div>
+
+
+    
    
 </body>
 </html>
