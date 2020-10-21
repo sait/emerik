@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    #pago{
+        text-align: left;
+        background-color: black;
+        width: 100%;
+    }
+    h1{
+        margin-left: 50px;
+    }
+    #tarjeta,#paypal,#oxxo,#amazon{
+        background-color: lightgray;
+        border-radius: 50px;
+    }
+    #botones1,#botones2{
+        background-color: gray;
+    }
+    #radioboton1{
+        
+    }
+  </style>
+</head>
+<body>
+
+
+    <div id="pago">
+        <br><br><br>
+        <h1 class="text-white">SELECCIONA UN MÉTODO DE PAGO</h1><br><br>
+        <div class="row" >
+            <div class="col-sm-1" id="botones1"></div>
+            <div class="col-sm-8"id="botones2">
+            <div class="container" >
+            <br><br><br><br><br>
+                <div id="tarjeta"><br>
+                    <h3><input type="radio" id="radioboton1" name="opciones" value="opcion_1">
+                     Tarjeta de Débito / Crédito </h3><br>
+                </div>
+            <br><br><br>
+                <div id="paypal"><br>
+                    <h3><input type="radio" id="radioboton2" name="opciones" value="opcion_2">
+                     Paypal</h3><br>
+                </div>
+            <br><br><br>
+                <div id="oxxo"><br>
+                    <h3><input type="radio" id="radioboton3" name="opciones" value="opcion_3">
+                     OXXO</h3><br>
+                </div>
+            <br><br><br>
+                <div id="amazon"><br>
+                    <h3><input type="radio" id="radioboton4" name="opciones" value="opcion_4" >
+                     Amazon Pay</h3><br>
+                </div>
+            </div><br><br><br>
+            </div>
+            
+        </div>
+        
+        
+        
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="pago.js"></script>
+
+</body>
+</html>
