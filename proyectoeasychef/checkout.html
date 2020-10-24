@@ -10,14 +10,162 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <style>
-      body{
-          background-color: lightgray;
-      }
+      #checkout{
+        text-align: left;
+        background-color: black;
+        width: 100%;
+    }
+    h1, #datos{
+        margin-left: 50px;
+    }
+    #datos,#botones1,#botones2{
+        background-color: gray;
+    }
+    hr{
+        border-color:white;
+        width: 95%;
+    }
+    #Nombre,#adress,#Ciudad,#Estado,#Postal,#Tarjeta,#Mes,#CVV{
+        width: 75%;
+        color: black;
+    }
+    #expiracion{
+    }
+
   </style>
 </head>
 
 
 <body>
+    <div id="checkout">
+        <br><br><br>
+        <div class="row">
+            <div class="col-sm-9">
+                <h1 class="text-white">INFORMACIÓN DE PAGO</h1><br><br>
+            </div>
+            <div class="col-sm-3 text-white">
+                <h3>Resumen del Pedido</h3><br>
+            </div>
+        </div>
+        <form action="/exito.html">
+        <div class="row" >
+            <div class="col-sm-5"id="botones2">
+                <div class="container" id="datos" >
+                <br>
+                   
+                     <h3 class="text-black" id="personal">Información Personal</h3><br>
+                     
+                     <div class="form-group">
+                        <label for="Nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="Nombre" name="Nombre">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="adress">Dirección de Facturación</label>
+                        <input type="text" class="form-control" id="adress" name="adress">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Ciudad">Ciudad:</label>
+                        <input type="text" class="form-control" id="Ciudad" name="Ciudad">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Estado">Estado:</label>
+                        <input type="text" class="form-control" id="Estado" name="Estado">
+                      </div>
+
+                      <div class="form-group">
+                        <label for="Postal">Código Postal:</label>
+                        <input type="text" class="form-control" id="Postal" name="Postal">
+                      </div>
+                    
+               
+                </div><br><br><br>  
+            </div>
+            <div class="col-sm-4" id="botones1"><br>
+                    <h3> Información de Tarjeta</h3><br>
+
+                    <div class="form-group">
+                        <label for="Tarjeta">Número de Tarjeta</label>
+                        <input type="text" class="form-control" id="Tarjeta" name="
+                        Tarjeta">
+                    </div>
+                    <div class="row" id="expiracion">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="Mes">Mes</label>
+                                <input type="text" class="form-control" id="Mes" name="Mes">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="Año">Año</label>
+                                <input type="text" class="form-control" id="Año" name="Año">
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="CVV">CVV</label>
+                                <input type="text" class="form-control" id="CVV" name="CVV">
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+            </div>
+            <div class="col-sm-3 text-white" id="resumen">
+                <img src="A.jpg" class="float-left" style="width:60%"> <br><br><br> <br><br><br>  <br><br><br> <br><br><br> <br><br><br>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5> Hamburguesa:</h5><br>
+                        <h5> Refresco:</h5>
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <h5> $150.00</h5><br>
+                        <h5>$50.00</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5> Subtotal:</h5><br>
+                        <h5> IVA:</h5>
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <h5>$200.00</h5>
+                        <h5>$32.00</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5> TOTAL: </h5>
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <h5>$232.00</h5>
+                        
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary">Pagar</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                <br><br><br>
+            </div>
+        </div>
+        </form>
+    </div>
+
 
     
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

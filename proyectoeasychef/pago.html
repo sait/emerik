@@ -25,8 +25,9 @@
     #botones1,#botones2{
         background-color: gray;
     }
-    #radioboton1{
-        
+    hr{
+        border-color:white;
+        width: 95%;
     }
   </style>
 </head>
@@ -35,7 +36,16 @@
 
     <div id="pago">
         <br><br><br>
-        <h1 class="text-white">SELECCIONA UN MÉTODO DE PAGO</h1><br><br>
+        <div class="row">
+            <div class="col-sm-9">
+                <h1 class="text-white">SELECCIONA UN MÉTODO DE PAGO</h1><br><br>
+            </div>
+            <div class="col-sm-3 text-white">
+                <h3>Resumen del Pedido</h3><br>
+            </div>
+        
+        </div>
+        <form action="/checkout.html">
         <div class="row" >
             <div class="col-sm-1" id="botones1"></div>
             <div class="col-sm-8"id="botones2">
@@ -60,11 +70,56 @@
                     <h3><input type="radio" id="radioboton4" name="opciones" value="opcion_4" >
                      Amazon Pay</h3><br>
                 </div>
-            </div><br><br><br>
+            </div><br><br><br>  
             </div>
-            
+            <div class="col-sm-3 text-white" id="resumen">
+                <img src="A.jpg" class="float-left" style="width:60%"> <br><br><br> <br><br><br>  <br><br><br> <br><br><br> <br><br><br>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5> Hamburguesa:</h5><br>
+                        <h5> Refresco:</h5>
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <h5> $150.00</h5><br>
+                        <h5>$50.00</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5> Subtotal:</h5><br>
+                        <h5> IVA:</h5>
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <h5>$200.00</h5>
+                        <h5>$32.00</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h5> TOTAL: </h5>
+                    </div>
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-3">
+                        <h5>$232.00</h5>
+                        
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <button type="submit" class="btn btn-primary">Proceder al Pago</button>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+
+            </div>
         </div>
-        
+    </form>
         
         
 
